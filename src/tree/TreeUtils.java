@@ -9,7 +9,9 @@ import java.util.List;
  * 树的类型题目
  */
 public class TreeUtils {
-
+    /**
+     * =================================================================================================================
+     */
     /**
      * lc-剑指offer 26
      * 树的子结构
@@ -30,7 +32,9 @@ public class TreeUtils {
         }
         return recurJudeg(A.left, B.left) && recurJudeg(A.right, B.right);
     }
-
+    /**
+     * =================================================================================================================
+     */
     /**
      * 剑指offer-07 [https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/]
      * 重建二叉树
@@ -73,7 +77,9 @@ public class TreeUtils {
 
         return root;
     }
-
+    /**
+     * =================================================================================================================
+     */
     /**
      * 297. 二叉树的序列化与反序列化 (https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
      * @param root
@@ -114,7 +120,9 @@ public class TreeUtils {
         root.right = rdeserialize(dataList);
         return root;
     }
-
+    /**
+     * =================================================================================================================
+     */
     /**
      * 剑指 28/ lc 101 (https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/)
      * 对称的二叉树
@@ -134,5 +142,7 @@ public class TreeUtils {
         }
         return recurSymmetric(left.left, right.right) && recurSymmetric(left.right, right.left);
     }
-
+    /**
+     * =================================================================================================================
+     */
 }
