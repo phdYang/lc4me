@@ -1,6 +1,9 @@
 package tree;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 树的类型题目
@@ -69,6 +72,67 @@ public class TreeUtils {
         root.right = buildTree(rightPreorder, rightIneorder);
 
         return root;
+    }
+
+    /**
+     * 297. 二叉树的序列化与反序列化 (https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+     * @param root
+     * @return
+     */
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        return preorderTraversal(root, "");
+    }
+
+    public String preorderTraversal(TreeNode root, String ans){
+        if (root != null) {
+            ans += root.val + ",";
+            ans = preorderTraversal(root.left, ans);
+            ans = preorderTraversal(root.right, ans);
+        } else {
+            ans += "None,";
+        }
+        return ans;
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        String[] dataArr = data.split(",");
+        List<String> dataList = new LinkedList<String>(Arrays.asList(dataArr));
+        return rdeserialize(dataList);
+    }
+
+    public TreeNode rdeserialize(List<String> dataList){
+        if ("None".equals(dataList.get(0))){
+            dataList.remove(0);
+            return null;
+        }
+        TreeNode root = new TreeNode(Integer.valueOf(dataList.get(0)));
+        dataList.remove(0);
+        root.left = rdeserialize(dataList);
+        root.right = rdeserialize(dataList);
+        return root;
+    }
+
+    /**
+     * 剑指 28/ lc 101 (https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/)
+     * 对称的二叉树
+     * @param root
+     * @return
+     */
+    public boolean isSymmetric(TreeNode root) {
+        return root == null ? true : recurSymmetric(root.left, root.right);
+    }
+
+    public boolean recurSymmetric(TreeNode left, TreeNode right) {
+        if (left == null && right == null) {
+            return true;
+        }
+        if (left == null || right == null || left.val != right.val) {
+            return false;
+        }
+        return recurSymmetric(left.left, right.right) && recurSymmetric(left.right, right.left);
     }
 
 }
