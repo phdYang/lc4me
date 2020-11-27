@@ -1,6 +1,5 @@
 package tree;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -145,4 +144,40 @@ public class TreeUtils {
     /**
      * =================================================================================================================
      */
+    /**
+     * 剑指 Offer 27. 二叉树的镜像 / lc 226 (https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        TreeNode tmp = root.left;
+        root.left = mirrorTree(root.right);
+        root.right = mirrorTree(tmp);
+        return  root;
+    }
+    /**
+     * =================================================================================================================
+     */
+    /**
+     * LCP 10. 二叉树任务调度
+     * @param root
+     * @return
+     */
+    public double minimalExecTime(TreeNode root) {
+
+        return recurExec(root)[0];
+    }
+    public double[] recurExec(TreeNode root) {
+        if (root == null) {
+            return new double[]{0.0D, 0.0D};
+        }
+        double[] leftTimes = recurExec(root.left);
+        double[] rightTimes = recurExec(root.right);
+        double sum = leftTimes[1] + rightTimes[1];
+        double minTime = Math.max(Math.max(leftTimes[0], rightTimes[0]), sum/2) + root.val;
+        return new double[]{minTime, sum + root.val};
+    }
 }
