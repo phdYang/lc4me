@@ -8,3 +8,4 @@
 4. [剑指 28 对称的二叉树/ lc 101 ](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/) -- 复习
 5. [剑指 Offer 27. 二叉树的镜像 / lc 226](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/) -- TODO:查阅题解
 6. [LCP 10. 二叉树任务调度](https://leetcode-cn.com/problems/er-cha-shu-ren-wu-diao-du/) -- 复习！复习！复习！dp就是突破点;TODO: 待思考状态转移方程的证明以及方程的代码实现
+7. [剑指 Offer 68 - II. 二叉树的最近公共祖先 / lc 236](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/) -- 重点复习
