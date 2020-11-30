@@ -2,6 +2,8 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库
 
+## 树之专题
+
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
 2. [剑指offer-07 重建二叉树 / lc-105](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/) --- TODO:查阅题解
 3. [jz-37 二叉树的序列化与反序列化 / Lc-297 Hard](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) -- TODO:困惑点在于只有前序序列可以还原一颗树么？
@@ -9,3 +11,5 @@
 5. [剑指 Offer 27. 二叉树的镜像 / lc 226](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/) -- TODO:查阅题解
 6. [LCP 10. 二叉树任务调度](https://leetcode-cn.com/problems/er-cha-shu-ren-wu-diao-du/) -- 复习！复习！复习！dp就是突破点;TODO: 待思考状态转移方程的证明以及方程的代码实现
 7. [剑指 Offer 68 - II. 二叉树的最近公共祖先 / lc 236](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/) -- 重点复习
+8. [剑指 Offer 36. 二叉搜索树与双向链表 / lc 426 会员](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/) -- 本题也是重点，更重要的是链表相关的知识也忘记了，树之后重点关注链表相关题目。
+

@@ -205,5 +205,31 @@ public class TreeUtils {
         }
         return root;
     }
+    /**
+     * 剑指 Offer 36. 二叉搜索树与双向链表 / lc 426 (https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/)
+     * * 什么是二叉搜索树
+     */
+    TreeNode pre, head;
+    public TreeNode treeToDoublyList(TreeNode root) {
+        if (root == null) return null;
+        dfs(root);
+        head.left = pre;
+        pre.right = head;
+        return head;
+    }
+
+    void dfs(TreeNode cur){
+        if (cur == null) return;
+        dfs(cur.left);
+        if(pre != null) {
+            pre.right = cur;
+        }else {
+            head = cur;
+        }
+        cur.left = pre;
+        pre = cur;
+        dfs(cur.right);
+    }
+
 
 }
