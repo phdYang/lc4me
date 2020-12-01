@@ -231,5 +231,25 @@ public class TreeUtils {
         dfs(cur.right);
     }
 
+    /**
+     * 剑指 Offer 54. 二叉搜索树的第k大节点
+     */
 
+    int ans, k;
+
+    public int kthLargest(TreeNode root, int k) {
+        this.k = k;
+        dfs4kthLargest(root);
+        return ans;
+    }
+
+    public void dfs4kthLargest(TreeNode root) {
+        if (root != null) {
+            dfs4kthLargest(root.right);
+            if (--k == 0) {
+               ans = root.val;
+            }
+            dfs4kthLargest(root.left);
+        }
+    }
 }
