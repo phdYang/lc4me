@@ -252,4 +252,32 @@ public class TreeUtils {
             dfs4kthLargest(root.left);
         }
     }
+    /**
+     * 剑指 Offer 68 - I. 二叉搜索树的最近公共祖先
+     */
+    // 解法一 二叉树的最近公共祖先
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) {
+            return root;
+        }
+        TreeNode left = lowestCommonAncestor2(root.left, p, q);
+        TreeNode right = lowestCommonAncestor2(root.right, p, q);
+        if (left == null) {
+            return right;
+        }
+        if (right == null){
+            return left;
+        }
+        return root;
+    }
+    // 二叉搜索树
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+        if (root.val < p.val && root.val < q.val) {
+            return lowestCommonAncestor3(root.right, p, q);
+        }
+        if (root.val > p.val && root.val > q.val) {
+            return lowestCommonAncestor3(root.left, p, q);
+        }
+        return root;
+    }
 }
