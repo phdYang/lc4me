@@ -298,4 +298,30 @@ public class TreeUtils {
         while (postorder[p] > postorder[j])p++;
         return p == j && dfs(postorder,i, m - 1) && dfs(postorder, m, j - 1);
     }
+
+    /**
+     * 剑指 Offer 34. 二叉树中和为某一值的路径 / LC 113
+     * @param root
+     * @param sum
+     * @return
+     */
+    LinkedList<List<Integer>> res = new LinkedList<>();
+    LinkedList<Integer> path = new LinkedList<>();
+
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        dfs(root, sum);
+        return res;
+    }
+
+    public void dfs(TreeNode root, int sum) {
+        if (root == null) return;
+        path.add(root.val);
+        sum -= root.val;
+        if (sum == 0 && root.left == null && root.right ==null){
+            res.add(new LinkedList<>(path));
+        }
+        dfs(root.left, sum);
+        dfs(root.right, sum);
+        path.removeLast();
+    }
 }
