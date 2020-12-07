@@ -324,4 +324,21 @@ public class TreeUtils {
         dfs(root.right, sum);
         path.removeLast();
     }
+
+    /**
+     * 572. 另一个树的子树
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isSubtree(TreeNode s, TreeNode t) {
+        if (s == null)return false;
+        return dfs(s, t) || isSubtree(s.left, t) || isSubtree(s.right, t);
+    }
+
+    public boolean dfs(TreeNode s, TreeNode t){
+        if (s == null && t == null) return true;
+        if (s == null || t == null || s.val != t.val) return false;
+        return dfs(s.left, t.left) && dfs(s.right, t.right);
+    }
 }
