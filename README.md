@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[13/150]**<br>
+**[14/150]**<br>
 ## 树之专题
 
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -17,6 +17,8 @@
 10. [剑指 Offer 68 - I. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
 11. [剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)
 12. [剑指 Offer 34. 二叉树中和为某一值的路径 / LC 113](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/) -- 截止目前，感觉自己在抄作业，思路全没了
-13. [572. 另一个树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree/) -- 第二遍，依然不会，需要整理做题的套路
+13. [572. 另一个树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree/) -- 第二遍，依然不会，需要整理做题的套路；同1
+14. [面试题 04.10. 检查子树](https://leetcode-cn.com/problems/check-subtree-lcci/) -- 同1、13
+15. [1609. 奇偶树](https://leetcode-cn.com/problems/even-odd-tree/)
 
 

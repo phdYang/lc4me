@@ -1,9 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 树的类型题目
@@ -340,5 +337,59 @@ public class TreeUtils {
         if (s == null && t == null) return true;
         if (s == null || t == null || s.val != t.val) return false;
         return dfs(s.left, t.left) && dfs(s.right, t.right);
+    }
+
+    /**
+     * 面试题 04.10. 检查子树
+     * @param t1
+     * @param t2
+     * @return
+     */
+    public boolean checkSubTree(TreeNode t1, TreeNode t2) {
+        return (t1 != null && t2 != null) &&
+                (check(t1, t2) || checkSubTree(t1.left, t2) || checkSubTree(t1.right, t2));
+    }
+
+    public boolean check(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null) return true;
+        if (t1 == null || t2 == null || t1.val != t2.val)return false;
+        return check(t1.left, t2.left) && check(t1.right, t2.right);
+    }
+
+
+    /**
+     * 1609. 奇偶树
+     * @param root
+     * @return
+     */
+    public boolean isEvenOddTree(TreeNode root) {
+        if (root == null) return false;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int level = 0;
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            int preVal = -1;
+            for (int i = 0; i < size; i++) {
+                TreeNode tmp = queue.poll();
+                if (tmp.left != null)queue.offer(tmp.left);
+                if (tmp.right != null)queue.offer(tmp.right);
+                int val = tmp.val;
+                if (level % 2 == 0) { // 偶数
+                    if (val % 2 == 0) return false;
+                    if (preVal != -1) {
+                        if (val <= preVal) return false;
+                    }
+                }else { // 奇数
+                    if (val % 2 != 0) return false;
+                    if (preVal != -1) {
+                        if (val >= preVal) return false;
+                    }
+                }
+                preVal = val;
+            }
+            level++;
+        }
+        return true;
     }
 }
