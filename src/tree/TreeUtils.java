@@ -440,4 +440,50 @@ public class TreeUtils {
         root.right = mergeTrees(t1.right, t2.right);
         return root;
     }
+
+    /**
+     * 310. 最小高度树
+     * @param n
+     * @param edges
+     * @return
+     */
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        List<Integer> res = new ArrayList<>();
+        if (n == 1) {
+            res.add(0); // 0 is last node
+            return res;
+        }
+        // 构造度和邻接矩阵
+        int[] degree = new int[n];
+        List<List<Integer>> mList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            mList.add(new ArrayList<>());
+        }
+        for (int[] edge : edges) {
+            degree[edge[0]]++;
+            degree[edge[1]]++;
+            mList.get(edge[0]).add(edge[1]);
+            mList.get(edge[1]).add(edge[0]);
+        }
+        Queue<Integer> q = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (degree[i]==1)q.offer(i);
+        }
+        
+        while (!q.isEmpty()) {
+            res = new ArrayList<>();
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                int cur = q.poll();
+                res.add(cur);
+
+                List<Integer> neighbors = mList.get(cur);
+                for (int neighbor:neighbors) {
+                    degree[neighbor]--;
+                    if (degree[neighbor] == 1) q.offer(neighbor);
+                }
+            }
+        }
+        return res;
+    }
 }
