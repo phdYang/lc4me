@@ -1,5 +1,8 @@
 package tree;
 
+import sun.reflect.generics.tree.Tree;
+import sun.rmi.log.LogInputStream;
+
 import java.util.*;
 
 /**
@@ -465,6 +468,7 @@ public class TreeUtils {
             mList.get(edge[0]).add(edge[1]);
             mList.get(edge[1]).add(edge[0]);
         }
+        // bfs遍历
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < n; i++) {
             if (degree[i]==1)q.offer(i);
@@ -486,4 +490,34 @@ public class TreeUtils {
         }
         return res;
     }
+
+    /**
+     * 897. 递增顺序查找树
+     * @param root
+     * @return
+     */
+    List<Integer> rs = new ArrayList<>();
+    public TreeNode increasingBST(TreeNode root) {
+        inOrder(root);
+        if (rs.size() == 0)return null;
+        TreeNode ret = new TreeNode(rs.get(0));
+        TreeNode p = ret;
+        for (int i = 1; i < rs.size(); i++) {
+            TreeNode tmp = new TreeNode(rs.get(i));
+            p.left = null;
+            p.right = tmp;
+            p = p.right;
+        }
+        return ret;
+    }
+
+    public void inOrder(TreeNode root){
+        if (root != null) {
+            inOrder(root.left);
+            rs.add(root.val);
+            inOrder(root.right);
+        }
+    }
+
+
 }
