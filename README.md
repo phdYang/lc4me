@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[20/150]**<br>
+**[21/150]**<br>
 ## 树之专题
 
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -25,6 +25,7 @@
 18. [617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) -- 基本明确会的点和不会的点，基本清晰了起来；和题的简单还是难没有关系
 19. [310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/) -- 这对于我来说是一个全新的体型，已经由常规树进入简单图的领域，相关的处理手法，bfs的遍历都不甚熟练，等全部练习掌握树之后，再从基本概念攻克图领域相关入门问题
 20. [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
+21. [655. 输出二叉树](https://leetcode-cn.com/problems/print-binary-tree/) -- 你说脑子就是不转了 我能怎么办呢，感觉理解还是不到位 似乎在过分追求数量
 
 
 
