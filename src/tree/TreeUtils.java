@@ -563,4 +563,26 @@ public class TreeUtils {
        return root;
     }
 
+
+    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+        List<Integer> rs1 = new ArrayList<>();
+        helper(root1, rs1);
+        List<Integer> rs2 = new ArrayList<>();
+        helper(root2, rs2);
+        if (rs1.size() != rs2.size())return false;
+        for (int i = 0; i < rs1.size(); i++) {
+            if (rs1.get(i) != rs2.get(i))
+                return false;
+        }
+        return true;
+    }
+
+    public void helper(TreeNode root, List<Integer> ans) {
+        if (root == null) return ;
+        helper(root.left, ans);
+        if (root.left == null && root.right == null) {
+            ans.add(root.val);
+        }
+        helper(root.right, ans);
+    }
 }

@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[21/150]**<br>
+**[23/150]**<br>
 ## 树之专题
 
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -27,6 +27,7 @@
 20. [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
 21. [655. 输出二叉树](https://leetcode-cn.com/problems/print-binary-tree/) -- 你说脑子就是不转了 我能怎么办呢，感觉理解还是不到位 似乎在过分追求数量
 22. [814. 二叉树剪枝](https://leetcode-cn.com/problems/binary-tree-pruning/)
+23. [872. 叶子相似的树](https://leetcode-cn.com/problems/leaf-similar-trees/)
 
 
 
