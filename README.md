@@ -26,6 +26,8 @@
 19. [310. 最小高度树](https://leetcode-cn.com/problems/minimum-height-trees/) -- 这对于我来说是一个全新的体型，已经由常规树进入简单图的领域，相关的处理手法，bfs的遍历都不甚熟练，等全部练习掌握树之后，再从基本概念攻克图领域相关入门问题
 20. [897. 递增顺序查找树](https://leetcode-cn.com/problems/increasing-order-search-tree/)
 21. [655. 输出二叉树](https://leetcode-cn.com/problems/print-binary-tree/) -- 你说脑子就是不转了 我能怎么办呢，感觉理解还是不到位 似乎在过分追求数量
+22. [814. 二叉树剪枝](https://leetcode-cn.com/problems/binary-tree-pruning/)
+
 
 
 
