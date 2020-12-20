@@ -563,26 +563,34 @@ public class TreeUtils {
        return root;
     }
 
-
-    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
-        List<Integer> rs1 = new ArrayList<>();
-        helper(root1, rs1);
-        List<Integer> rs2 = new ArrayList<>();
-        helper(root2, rs2);
-        if (rs1.size() != rs2.size())return false;
-        for (int i = 0; i < rs1.size(); i++) {
-            if (rs1.get(i) != rs2.get(i))
-                return false;
+    /**
+     * 968. 监控二叉树
+     * @param root
+     * @return
+     */
+    int result = 0;
+    public int minCameraCover(TreeNode root) {
+        if (root == null)return result;
+        if (trav(root) == 0) {
+            result++;
         }
-        return true;
+        return result;
     }
 
-    public void helper(TreeNode root, List<Integer> ans) {
-        if (root == null) return ;
-        helper(root.left, ans);
-        if (root.left == null && root.right == null) {
-            ans.add(root.val);
+    public int trav(TreeNode root){
+        if (root == null) return 2;
+        int left = trav(root.left);
+        int right = trav(root.right);
+
+        if (left == 2 && right == 2) return 0;
+        if (left == 0 || right == 0) {
+            result++;
+            return 1;
         }
-        helper(root.right, ans);
+
+        if (left == 1 || right == 1) return 2;
+
+        return -1;
+
     }
 }
