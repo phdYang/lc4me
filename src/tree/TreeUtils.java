@@ -114,7 +114,7 @@ public class TreeUtils {
             dataList.remove(0);
             return null;
         }
-        TreeNode root = new TreeNode(Integer.valueOf(dataList.get(0)));
+        TreeNode root = new TreeNode(Integer.parseInt(dataList.get(0)));
         dataList.remove(0);
         root.left = rdeserialize(dataList);
         root.right = rdeserialize(dataList);
