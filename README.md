@@ -30,6 +30,7 @@
 23. [872. 叶子相似的树](https://leetcode-cn.com/problems/leaf-similar-trees/)
 24. [968. 监控二叉树](https://leetcode-cn.com/problems/binary-tree-cameras/) -- 有的解法是树形DP有的解法是贪心，这个层次的证明我暂且不理，但dp我没能看懂，贪心的思路我理解，但是原理和证明依旧不懂
 25. [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)
+26. []()
 
 
 
