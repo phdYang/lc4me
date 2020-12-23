@@ -9,6 +9,34 @@ import java.util.Queue;
 public class TreeCode {
 
     /**
+     * 654. 最大二叉树
+     * @param nums
+     * @return
+     */
+    public TreeNode constructMaximumBinaryTree(int[] nums) {
+        return dfs(nums, 0, nums.length - 1);
+    }
+
+    public TreeNode dfs(int[] nums, int start, int end) {
+        if ( start > end) return null;
+        int maxi = start;
+        int max = nums[start];
+        for(int i = start;i<=end;i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+                maxi = i;
+            }
+        }
+
+        TreeNode root = new TreeNode(nums[maxi]);
+        root.left = dfs(nums, start, maxi-1);
+        root.right = dfs(nums, maxi+1, end);
+
+        return root;
+
+    }
+
+    /**
      * 114. 二叉树展开为链表
      * @param root
      */
