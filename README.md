@@ -33,7 +33,7 @@
 25. [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)
 26. [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) -- 第一下就可以想到的BFS以及经过提升感觉非常简洁的前序遍历
 27. [654. 最大二叉树](https://leetcode-cn.com/problems/maximum-binary-tree/)
-28. []()
+28. [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
 
 

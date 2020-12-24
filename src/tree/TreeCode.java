@@ -8,6 +8,47 @@ import java.util.Queue;
 
 public class TreeCode {
 
+
+    /**
+     * 106. 从中序与后序遍历序列构造二叉树
+     * @param inorder
+     * @param postorder
+     * @return
+     */
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        if (inorder.length == 0 || postorder.length == 0) return null;
+        // 1 找到根
+        int val = postorder[postorder.length - 1];
+        // 2 中序 & 后序 -> 左 & 右
+        int index = 0;
+        for(int i=0;i<inorder.length;i++) {
+            if (inorder[i] == val) {
+                index = i;
+                break;
+            }
+        }
+        int[] inorderLeft = new int[index];
+        int[] inorderRight = new int[inorder.length - index - 1];
+
+        int[] postorderLeft = new int[index];
+        int[] postorderRight = new int[inorder.length - index - 1];
+
+        for(int i=0;i<inorderLeft.length;i++) {
+            inorderLeft[i] = inorder[i];
+            postorderLeft[i] = postorder[i];
+        }
+        for(int i=0;i<inorderRight.length;i++) {
+            inorderRight[i] = inorder[index + 1 + i];
+            postorderRight[i] = postorder[index + i];
+        }
+        // 3
+        TreeNode root = new TreeNode(val);
+        root.left = buildTree(inorderLeft, postorderLeft);
+        root.right = buildTree(inorderRight, postorderRight);
+
+        return root;
+    }
+
     /**
      * 654. 最大二叉树
      * @param nums
