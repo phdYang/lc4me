@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[26/150]**<br>
+**[29/150]**<br>
 ## 树之专题
 
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -34,6 +34,8 @@
 26. [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) -- 第一下就可以想到的BFS以及经过提升感觉非常简洁的前序遍历
 27. [654. 最大二叉树](https://leetcode-cn.com/problems/maximum-binary-tree/)
 28. [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+29. [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
+
 
 
 

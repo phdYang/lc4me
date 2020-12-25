@@ -1,13 +1,34 @@
 package tree;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class TreeCode {
 
+
+    Map<String, Integer> map = new HashMap<>();
+    List<TreeNode> ans = new LinkedList<>();
+
+    /**
+     * 652. 寻找重复的子树
+     * @param root
+     * @return
+     */
+    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+        dfs(root);
+        return ans;
+    }
+
+    public String dfs(TreeNode root) {
+        if (root == null) return "#";
+        String left = dfs(root.left);
+        String right = dfs(root.right);
+        String subTree = left + "," + right + "," + root.val;
+        int freq = map.getOrDefault(subTree, 0);
+        if (freq == 1) ans.add(root);
+        map.put(subTree, freq + 1);
+        return subTree;
+    }
 
     /**
      * 106. 从中序与后序遍历序列构造二叉树
