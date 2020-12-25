@@ -2,9 +2,9 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[29/150]**<br>
-## 树之专题
+**[30/150]**<br>
 
+## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
 2. [剑指offer-07 重建二叉树 / lc-105](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/) --- TODO:查阅题解
 3. [jz-37 二叉树的序列化与反序列化 / Lc-297 Hard](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) -- TODO:困惑点在于只有前序序列可以还原一颗树么？
@@ -35,6 +35,7 @@
 27. [654. 最大二叉树](https://leetcode-cn.com/problems/maximum-binary-tree/)
 28. [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 29. [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
+30. [563. 二叉树的坡度](https://leetcode-cn.com/problems/binary-tree-tilt/) -- 本题其实让我明白了 递归一个首要条件是 明白函数要干什么；第二呢，新概念要多读几遍题目，理清其中规律
 
 
 

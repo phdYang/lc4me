@@ -6,6 +6,28 @@ import java.util.*;
 public class TreeCode {
 
 
+    int rs = 0;
+
+    /**
+     * 563. 二叉树的坡度
+     * @param root
+     * @return
+     */
+    public int findTilt(TreeNode root) {
+        getNodeVal(root);
+        return rs;
+
+    }
+
+    public int getNodeVal(TreeNode root) {
+        if (root == null) return 0;
+        int left = getNodeVal(root.left);
+        int right = getNodeVal(root.right);
+        rs += Math.abs(left - right);
+        return left + right + root.val;
+    }
+
+
     Map<String, Integer> map = new HashMap<>();
     List<TreeNode> ans = new LinkedList<>();
 
