@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[30/150]**<br>
+**[31/150]**<br>
 
 ## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -36,6 +36,7 @@
 28. [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 29. [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/)
 30. [563. 二叉树的坡度](https://leetcode-cn.com/problems/binary-tree-tilt/) -- 本题其实让我明白了 递归一个首要条件是 明白函数要干什么；第二呢，新概念要多读几遍题目，理清其中规律
+31. [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) -- 函数设计的问题，有一些基础的感觉疏忽了
 
 
 

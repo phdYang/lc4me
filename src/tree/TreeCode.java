@@ -5,6 +5,25 @@ import java.util.*;
 
 public class TreeCode {
 
+    /**
+     * 230. 二叉搜索树中第K小的元素
+     * @param root
+     * @param k
+     * @return
+     */
+    int kth = 0;
+    int kthAns = 0;
+    public int kthSmallest(TreeNode root, int k) {
+        traversel(root, k);
+        return kthAns;
+    }
+    public void traversel(TreeNode root, int k) {
+        if (root == null) return;
+        traversel(root.left, k);
+        kth++;
+        if (kth == k) kthAns = root.val;
+        traversel(root.right, k);
+    }
 
     int rs = 0;
 
