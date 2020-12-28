@@ -6,6 +6,40 @@ import java.util.*;
 public class TreeCode {
 
     /**
+     * 450. 删除二叉搜索树中的节点
+     * @param root
+     * @param key
+     * @return
+     */
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if (root == null) return null;
+        if (root.val == key) {
+            if (root.left == null && root.right == null) return null;
+            if (root.left == null) return root.right;
+            if (root.right == null) return root.left;
+            TreeNode t = root;
+            TreeNode node = t.right;
+            while(node.left != null) node = node.left;
+            // node is min node
+            root = node;
+            root.right = deleteMin(t.right);
+            root.left = t.left;
+
+        }else if (root.val > key) {
+            root.left = deleteNode(root.left, key);
+        } else {
+            root.right = deleteNode(root.right, key);
+        }
+        return root;
+    }
+
+    public TreeNode deleteMin(TreeNode root) {
+        if(root.left == null) return root.right;
+        root.left = deleteMin(root.left);
+        return root;
+    }
+
+    /**
      * 230. 二叉搜索树中第K小的元素
      * @param root
      * @param k
