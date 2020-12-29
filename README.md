@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[32/150]**<br>
+**[35/150]**<br>
 
 ## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -38,6 +38,9 @@
 30. [563. 二叉树的坡度](https://leetcode-cn.com/problems/binary-tree-tilt/) -- 本题其实让我明白了 递归一个首要条件是 明白函数要干什么；第二呢，新概念要多读几遍题目，理清其中规律
 31. [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) -- 函数设计的问题，有一些基础的感觉疏忽了
 32. [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/) -- 这道题的细节是删除节点：一种假装删除；一种投机删除但是会增加树的高度；一种是真正的删除，但感觉自己对链表有些不熟悉了，下一个章节开始刷链表类题目；
+33. [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/) -- 还是不会啊---还不是不会啊---还是不会啊000
+34. [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/) -- 所谓框架其实还是辅助的大方向思路，细节还是需要自己琢磨
+35. [701. 二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/) -- 
 
 
 

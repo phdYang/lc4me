@@ -5,6 +5,58 @@ import java.util.*;
 
 public class TreeCode {
 
+
+    /**
+     * 701. 二叉搜索树中的插入操作
+     * @param root
+     * @param val
+     * @return
+     */
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null)return new TreeNode(val);
+        if (root.val > val) { //
+            root.left = insertIntoBST(root.left, val);
+        }else if (root.val < val) {
+            root.right = insertIntoBST(root.right, val);
+        }
+        return root;
+    }
+
+    /**
+     * 700. 二叉搜索树中的搜索
+     * @param root
+     * @param val
+     * @return
+     */
+    public TreeNode searchBST(TreeNode root, int val) {
+        if (root == null) return null;
+        if (root.val == val) {
+            return root;
+        }else if (root.val > val) {
+            return searchBST(root.left, val);
+        }else if (root.val < val) {
+            return searchBST(root.right, val);
+        }
+        return root;
+    }
+
+    /**
+     * 98. 验证二叉搜索树
+     * @param root
+     * @return
+     */
+    public boolean isValidBST(TreeNode root) {
+        return isValidBST(root, null, null);
+    }
+
+    public boolean isValidBST(TreeNode root, TreeNode min, TreeNode max) {
+        if (root == null) return true;
+        if (min != null && min.val >= root.val) return false;
+        if (max != null && max.val <= root.val) return false;
+
+        return isValidBST(root.left, min, root) && isValidBST(root.right, root, max);
+    }
+
     /**
      * 450. 删除二叉搜索树中的节点
      * @param root
