@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[35/150]**<br>
+**[36/150]**<br>
 
 ## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -41,6 +41,9 @@
 33. [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/) -- 还是不会啊---还不是不会啊---还是不会啊000
 34. [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/) -- 所谓框架其实还是辅助的大方向思路，细节还是需要自己琢磨
 35. [701. 二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/) -- 
+========================================================================================================================
+36. [面试题 04.03. 特定深度节点链表](https://leetcode-cn.com/problems/list-of-depth-lcci/) -- 树 + 链表，实话，链表忘了些
+
 
 
 
