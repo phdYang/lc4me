@@ -5,6 +5,27 @@ import java.util.*;
 
 public class TreeCode {
 
+    /**
+     * 998. 最大二叉树 II
+     * 1. 如果根为空，则说明val最小，放在左子树
+     * 2. 如果根小于val，则将根挂在val的左子树
+     * 3. 剩下的情况就是 右子树的情况----？
+     * @param root
+     * @param val
+     * @return
+     */
+    public TreeNode insertIntoMaxTree(TreeNode root, int val) {
+        if (root == null || val > root.val) {
+            TreeNode p = new TreeNode(val);
+            p.left = root;
+            return p;
+        } else {
+            root.right = insertIntoMaxTree(root.right, val);
+
+            return root;
+        }
+    }
+
 
     /**
      * 701. 二叉搜索树中的插入操作

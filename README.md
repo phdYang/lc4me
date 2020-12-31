@@ -43,6 +43,7 @@
 35. [701. 二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/) -- 
 ========================================================================================================================
 36. [面试题 04.03. 特定深度节点链表](https://leetcode-cn.com/problems/list-of-depth-lcci/) -- 树 + 链表，实话，链表忘了些
+37. [998. 最大二叉树 II](https://leetcode-cn.com/problems/maximum-binary-tree-ii/)
 
 
 
