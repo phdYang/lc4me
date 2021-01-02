@@ -6,6 +6,20 @@ import java.util.*;
 public class TreeCode {
 
     /**
+     * 112. 路径总和
+     * @param root
+     * @param sum
+     * @return
+     */
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) return false;
+        sum = sum - root.val;
+        if (root.left == null && root.right == null && sum == 0) return true;
+        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum);
+
+    }
+
+    /**
      * 998. 最大二叉树 II
      * 1. 如果根为空，则说明val最小，放在左子树
      * 2. 如果根小于val，则将根挂在val的左子树

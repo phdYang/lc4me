@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[36/150]**<br>
+**[38/150]**<br>
 
 ## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -44,6 +44,7 @@
 ========================================================================================================================
 36. [面试题 04.03. 特定深度节点链表](https://leetcode-cn.com/problems/list-of-depth-lcci/) -- 树 + 链表，实话，链表忘了些
 37. [998. 最大二叉树 II](https://leetcode-cn.com/problems/maximum-binary-tree-ii/)
+38. [112. 路径总和](https://leetcode-cn.com/problems/path-sum/)
 
 
 
