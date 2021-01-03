@@ -1,9 +1,35 @@
 package tree;
 
 
+
 import java.util.*;
 
 public class TreeCode {
+    /**
+     * 437. 路径总和 III
+     * @param root
+     * @param sum
+     * @return
+     */
+    public int pathSum(TreeNode root, int sum) {
+        Map<Integer, Integer> prefixSum = new HashMap<>();
+        prefixSum.put(0,1);
+        return recursionPathSum(root, prefixSum, sum, 0);
+    }
+
+    private int recursionPathSum(TreeNode node, Map<Integer, Integer> prefixSum, int sum, int curSum) {
+        if (node == null)return 0;
+        int res = 0;
+        curSum += node.val;
+        res += prefixSum.getOrDefault(curSum - sum, 0);
+        prefixSum.put(curSum, prefixSum.getOrDefault(curSum, 0) + 1);
+
+        res += recursionPathSum(node.left, prefixSum, sum, curSum);
+        res += recursionPathSum(node.right, prefixSum, sum, curSum);
+
+        prefixSum.put(curSum, prefixSum.get(curSum) - 1);
+        return res;
+    }
 
     /**
      * 112. 路径总和
