@@ -2,9 +2,100 @@ package tree;
 
 
 
+
 import java.util.*;
 
 public class TreeCode {
+
+
+
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        TreeNode p1 = new TreeNode(2);
+        TreeNode p2 = new TreeNode(3);
+        TreeNode p3 = new TreeNode(4);
+        TreeNode p4 = new TreeNode(5);
+        TreeNode p5 = new TreeNode(6);
+        TreeNode p6 = new TreeNode(7);
+        root.left = p1;
+        root.right = p2;
+
+        p1.left = p3;
+        p1.right = p4;
+
+        p2.left = p5;
+        p2.right = p6;
+
+        //System.out.println(dfs(root, 10));
+    }
+
+
+    int res = 0;
+
+    /**
+     * 1530. 好叶子节点对的数量
+     * @param root
+     * @param distance
+     * @return
+     */
+    public int countPairs(TreeNode root, int distance) {
+       dfs(root, distance);
+       return res;
+    }
+
+    public List<Integer> dfs(TreeNode root, int distance) {
+        if (root == null) return new ArrayList<>();
+        List<Integer> ans = new ArrayList<>();
+        if (root.left == null && root.right == null) {
+            ans.add(1);
+            return ans;
+        }
+        List<Integer> left = dfs(root.left, distance);
+        for (int item:left) {
+            if (++item > distance) {
+                continue;
+            }
+            ans.add(item);
+        }
+        List<Integer> right = dfs(root.right, distance);
+        for (int item:right) {
+            if (++item > distance) {
+                continue;
+            }
+            ans.add(item);
+        }
+
+        for (int l:left) {
+            for (int r:right) {
+                res += (l+r) <= distance ? 1 : 0;
+            }
+        }
+        return ans;
+    }
+
+    /**
+     * 222. 完全二叉树的节点个数
+     * @param root
+     * @return
+     */
+    public int countNodes(TreeNode root) {
+        int hl = 0, hr = 0;
+        TreeNode l = root, r = root;
+        while (l != null) {
+            l = l.left;
+            hl++;
+        }
+        while (r != null) {
+            r = r.right;
+            hr++;
+        }
+        if (hl == hr)
+            return (int)Math.pow(2, hl) - 1;
+
+        return 1 + countNodes(root.left) + countNodes(root.right);
+    }
+
     /**
      * 437. 路径总和 III
      * @param root

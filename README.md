@@ -2,7 +2,7 @@
 
 > 顾名思义，这是一个为了自己的leet-code仓库 
 
-**[38/150]**<br>
+**[41/150]**<br>
 
 ## 树之专题
 1. [剑指offer-26题 树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/) --- 复习
@@ -45,6 +45,9 @@
 36. [面试题 04.03. 特定深度节点链表](https://leetcode-cn.com/problems/list-of-depth-lcci/) -- 树 + 链表，实话，链表忘了些
 37. [998. 最大二叉树 II](https://leetcode-cn.com/problems/maximum-binary-tree-ii/)
 38. [112. 路径总和](https://leetcode-cn.com/problems/path-sum/)
+39. [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/) -- 此题是完全抄袭的，对前缀和的理解完全不够，感觉，对树的框架理解了一些，但是，基础的逻辑题，还有待提升
+40. [222. 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/) -- 完全二叉树的节点，通过特性，提前中止递归条件；
+41. [1530. 好叶子节点对的数量](https://leetcode-cn.com/problems/number-of-good-leaf-nodes-pairs/) -- 我感觉得总结下二叉树的常用技巧，模板层次太高，需要沉下来的技巧；
 
 
 
