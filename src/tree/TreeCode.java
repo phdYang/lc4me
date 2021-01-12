@@ -12,12 +12,12 @@ public class TreeCode {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
-        TreeNode p1 = new TreeNode(2);
-        TreeNode p2 = new TreeNode(3);
-        TreeNode p3 = new TreeNode(4);
-        TreeNode p4 = new TreeNode(5);
-        TreeNode p5 = new TreeNode(6);
-        TreeNode p6 = new TreeNode(7);
+        TreeNode p1 = new TreeNode(0);
+        TreeNode p2 = new TreeNode(1);
+        TreeNode p3 = new TreeNode(0);
+        TreeNode p4 = new TreeNode(1);
+        TreeNode p5 = new TreeNode(0);
+        TreeNode p6 = new TreeNode(1);
         root.left = p1;
         root.right = p2;
 
@@ -27,7 +27,26 @@ public class TreeCode {
         p2.left = p5;
         p2.right = p6;
 
-        //System.out.println(dfs(root, 10));
+        System.out.println(sumRootToLeaf(root));
+    }
+
+
+    static int lAns = 0;
+
+    public static int sumRootToLeaf(TreeNode root) {
+        travel(root, 0);
+        return lAns;
+    }
+
+    public static void travel(TreeNode root, int ans) {
+        if (root == null) return;
+        ans = ans * 2 + root.val;
+        if (root.left == null && root.right == null) {
+            lAns += ans;
+        }
+
+        travel(root.left, ans);
+        travel(root.right, ans);
     }
 
 

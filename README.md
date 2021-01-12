@@ -48,6 +48,8 @@
 39. [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/) -- 此题是完全抄袭的，对前缀和的理解完全不够，感觉，对树的框架理解了一些，但是，基础的逻辑题，还有待提升
 40. [222. 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/) -- 完全二叉树的节点，通过特性，提前中止递归条件；
 41. [1530. 好叶子节点对的数量](https://leetcode-cn.com/problems/number-of-good-leaf-nodes-pairs/) -- 我感觉得总结下二叉树的常用技巧，模板层次太高，需要沉下来的技巧；
+42. [1022. 从根到叶的二进制数之和](https://leetcode-cn.com/problems/sum-of-root-to-leaf-binary-numbers/) -- 哎 越来越感觉是基础 知识了，立刻放下二叉树去进行基础链表的题目和基础字符串的题目
+
 
 
 
